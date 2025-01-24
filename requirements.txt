@@ -1,5 +1,5 @@
 pytest
 flake8
-ategory_encoders
+category_encoders
 mlflow
 dvc
