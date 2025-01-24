@@ -1,9 +1,9 @@
 """Module docstring explaining the purpose of the module."""
 
-import math
-import sys
-sys.path.append('mlopsassignment/models/')
-#from mlopsassignment/models/randomforest import add_numbers
+
+from models.randomforest import add_numbers
+# import sys
+# sys.path.append('mlopsassignment/models/')
 
 
 def test_add_numbers():
