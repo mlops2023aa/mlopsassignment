@@ -1,9 +1,11 @@
 """Module docstring explaining the purpose of the module."""
 
 
-from models.randomforest import add_numbers
-# import sys
-# sys.path.append('mlopsassignment/models/')
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(
+    os.path.dirname(__file__), '..')))
+from models import add_numbers  # noqa: E402
 
 
 def test_add_numbers():
