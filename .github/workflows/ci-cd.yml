@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: pip install flake8
       - name: Run Linting
-        run: flake8 /
+        run: flake8 .
 
   test:
     runs-on: ubuntu-latest
