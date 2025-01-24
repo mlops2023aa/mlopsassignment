@@ -1,5 +1,5 @@
-from model import add_numbers
+from math import sum
 
 if __name__ == "__main__":
-    result = add_numbers(5, 3)
+    result = sum(5, 3)
     print(f"Result: {result}")
