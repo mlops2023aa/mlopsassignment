@@ -104,8 +104,8 @@ svm_model = joblib.load(svm_model_path)
 model_metrics = {}
 
 # Evaluate each model on the test data
-for model_name, model in [("Random Forest", rf_model), 
-                          ("KNN", knn_model), 
+for model_name, model in [("Random Forest", rf_model),
+                          ("KNN", knn_model),
                           ("SVM", svm_model)]:
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
@@ -127,7 +127,8 @@ for model_name, model in [("Random Forest", rf_model),
     print("\n")
 
 # Determine the best model based on accuracy
-best_model_name = max(model_metrics, key=lambda x: model_metrics[x]["Accuracy"])
+best_model_name = max(model_metrics,
+                      key=lambda x: model_metrics[x]["Accuracy"])
 best_model = {
     "Random Forest": rf_model,
     "KNN": knn_model,
