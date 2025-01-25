@@ -104,9 +104,9 @@ svm_model = joblib.load(svm_model_path)
 model_metrics = {}
 
 # Evaluate each model on the test data
-for model_name, model in [("Random Forest", rf_model),
-                          ("KNN", knn_model),
-                          ("SVM", svm_model)]:
+for model_name, model in [("Random_Forest_best_model", rf_model),
+                          ("KNN_best_model", knn_model),
+                          ("SVM_best_model", svm_model)]:
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
     report = classification_report(y_test, y_pred, output_dict=True)
@@ -130,10 +130,18 @@ for model_name, model in [("Random Forest", rf_model),
 best_model_name = max(model_metrics,
                       key=lambda x: model_metrics[x]["Accuracy"])
 best_model = {
-    "Random Forest": rf_model,
-    "KNN": knn_model,
-    "SVM": svm_model
+    "Random_Forest_best_model": rf_model,
+    "KNN_best_model": knn_model,
+    "SVM_best_model": svm_model
 }[best_model_name]
 
 print(f"""The best model is: {best_model_name} with Accuracy:
        {model_metrics[best_model_name]['Accuracy']:.2f}""")
+
+# Define the directory for saving the selected model
+SELECTED_MODEL_PATH = os.path.join(MODEL_OUTPUT_DIR, "selected_model.pkl")
+
+# Save the best model
+joblib.dump(best_model, SELECTED_MODEL_PATH)
+print(f"""The best model ({best_model_name})
+      has been saved as 'selected_model.pkl' at: {SELECTED_MODEL_PATH}""")
