@@ -18,6 +18,7 @@ with mlflow.start_run():
     # Log parameters and metrics
     mlflow.log_param("n_estimators", 100)
     mlflow.log_param("max_depth", 10)
+    mlflow.log_param("random_state", 42)
     mlflow.log_metric("accuracy",
                       accuracy_score(y_test, rf_model.predict(X_test)))
 
