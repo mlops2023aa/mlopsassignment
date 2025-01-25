@@ -13,7 +13,8 @@ def check_dataset_exists(dataset_path):
     """Ensure the dataset exists."""
     if not os.path.exists(dataset_path):
         raise FileNotFoundError(
-            f"The dataset {dataset_path} does not exist. Please ensure it's available."
+            f"The dataset {dataset_path} does not exist. \
+                Please ensure it's available."
         )
 
 
@@ -23,7 +24,8 @@ def load_and_preprocess_data(dataset_path):
     data = pd.read_csv(dataset_path)
 
     # Define column names and target column
-    col_names = ['buying', 'maint', 'doors', 'persons', 'lug_boot', 'safety', 'class']
+    col_names = ['buying', 'maint', 'doors', 'persons',
+                 'lug_boot', 'safety', 'class']
     data.columns = col_names
     target_column = 'class'
 
