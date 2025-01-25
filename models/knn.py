@@ -17,7 +17,9 @@ with mlflow.start_run():
     mlflow.log_param("n_neighbors", 5)
     mlflow.log_param("metric", "minkowski")
     mlflow.log_param("p", 2)
-    mlflow.log_metric("accuracy", accuracy_score(y_test, knn_model.predict(X_test)))
+    mlflow.log_metric("accuracy",
+                      accuracy_score(y_test,
+                                     knn_model.predict(X_test)))
 
     # Save the model
     MODEL_PATH = os.path.join("models", "knn_model.pkl")

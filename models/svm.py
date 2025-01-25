@@ -17,7 +17,9 @@ with mlflow.start_run():
     mlflow.log_param("kernel", "rbf")
     mlflow.log_param("C", 1.0)
     mlflow.log_param("gamma", "scale")
-    mlflow.log_metric("accuracy", accuracy_score(y_test, svm_model.predict(X_test)))
+    mlflow.log_metric("accuracy",
+                      accuracy_score(y_test,
+                                     svm_model.predict(X_test)))
 
     # Save the model
     MODEL_PATH = os.path.join("models", "svm_model.pkl")
