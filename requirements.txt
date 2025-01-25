@@ -3,3 +3,7 @@ flake8
 category_encoders
 mlflow
 dvc
+flask
+pandas
+joblib
+scikit-learn
