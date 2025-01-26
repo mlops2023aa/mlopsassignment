@@ -1,2 +1,6 @@
 *.pkl
 __pycache__/*
+models/__pycache__/*
+models/__pycache__/__init__.cpython-310.pyc
+models/__pycache__/__init__.cpython-310.pyc
+models/__pycache__/randomforest.cpython-310.pyc
