@@ -5,6 +5,8 @@ Repository for mlops assignment
 ### Prerequisites
 - Python 3.8+
 - Git installed
+-The integration of DVC and google drive is broken. You will need to copy the data file from
+https://drive.google.com/file/d/1JOQfclYuxeguyPbEyXhQLFv4v7wBLTdh/view?usp=sharing to /data folder as a pre-requsite for the project
 
 ### Steps to Set Up the Project
 1. Clone the repository:
