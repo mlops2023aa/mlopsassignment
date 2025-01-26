@@ -1,5 +1,4 @@
-"""Module docstring explaining the purpose of the module."""
-
+"""Dummy file to demonstrate the test steps."""
 
 import sys
 import os
