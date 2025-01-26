@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, render_template, request, jsonify
 import joblib
 import os
 import pandas as pd
@@ -25,7 +25,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "Welcome to the ML Model API!"
+    return render_template('index.html')
+# Renders the HTML file in templates directory
 
 
 @app.route('/predict', methods=['POST'])

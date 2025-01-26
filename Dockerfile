@@ -8,6 +8,8 @@ COPY requirements.txt requirements.txt
 COPY app.py app.py
 COPY models/tuned_models/selected_model.pkl models/selected_model.pkl
 COPY models/encoder.pkl models/encoder.pkl
+COPY static/ static/
+COPY templates/ templates/
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
